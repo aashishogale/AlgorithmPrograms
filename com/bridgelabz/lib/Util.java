@@ -18,23 +18,23 @@ public class Util {
 
 	}
 
-//sort the character array
-public static int[] sort(int firAscii[])
-{
-	int temp=0;
-	for(int i=0; i < firAscii.length; i++){
-		for(int j=1; j < (firAscii.length-i); j++){
-			if(firAscii[j-1] > firAscii[j]){  
+	//sort the character array
+	public static int[] sort(int firAscii[])
+	{
+		int temp=0;
+		for(int i=0; i < firAscii.length; i++){
+			for(int j=1; j < (firAscii.length-i); j++){
+				if(firAscii[j-1] > firAscii[j]){  
 
-				temp = firAscii[j-1];  
-				firAscii[j-1] = firAscii[j];  
-				firAscii[j] = temp;  
-			} 
+					temp = firAscii[j-1];  
+					firAscii[j-1] = firAscii[j];  
+					firAscii[j] = temp;  
+				} 
+			}
+
 		}
-
+		return firAscii;
 	}
-	return firAscii;
-}
 
 	//convert to lower case
 	public static String toLowerCase(String string1)
@@ -202,7 +202,114 @@ public static int[] sort(int firAscii[])
 		return count==arr1.length;
 
 				
-	}	
+	}
+
+
+	public static int[] iBubbleSort(int []array) {
+		int temp;
+		
+		for(int i=0;i<array.length;i++) {
+			for(int j=1;j<array.length-i;j++) {
+				if(array[j-1]>array[j]) {
+					temp=array[j-1];
+					array[j-1]=array[j];
+					array[j]=temp;
+                 }			
+			}
+		}
+		
+		
+	return array;
+	}
+
+
+	public static String[] sBubbleSort(String []array) {
+		String temp;
+		
+		for(int i=0;i<array.length;i++) {
+			for(int j=1;j<array.length-i;j++) {
+				if(array[j-1].compareTo(array[j])>0) {
+					temp=array[j-1];
+					array[j-1]=array[j];
+					array[j]=temp;
+                 }			
+			}
+		}
+		
+		
+	return array;
+	}
+	
+	public  static int[] iInsertionSort(int []array) {
+		
+		int j;
+		int temp;	
+		for(int i=1;i<array.length;i++) {
+			 temp=array[i];
+			j=i-1;	
+			while(j>=0&&temp>array[j]) {
+				array[j+1]=array[j];
+				j=j-1;				
+			}
+			array[j+1]=temp;
+		}
+		
+		return array;		
+	}
+
+
+	public  static String[] sInsertionSort(String []array) {
+		
+		int j;	
+		String temp;
+		for(int i=1;i<array.length;i++) {
+			temp=array[i];
+			j=i-1;	
+			while(j>=0&&temp.compareTo(array[j])>0) {
+				array[j+1]=array[j];
+				j=j-1;				
+			}
+			array[j+1]=temp;
+		}
+		
+		return array;		
+	}
+	
+	public static int iBinarySearch(int []sArray,int number,int low,int high) {
+	
+		
+		int mid=low+high/2;
+		if(sArray[mid]>number) {
+			iBinarySearch(sArray,number,mid,sArray.length);
+		}
+		if(sArray[mid]<number) {
+			iBinarySearch(sArray,number,0,mid);
+		}
+		if(sArray[mid]==number) {
+			return mid;
+		}
+		return 0;
+	}
+
+	public static int sBinarySearch(String []sArray,String word,int low,int high) {
+	
+		
+		int mid=low+high/2;
+		if(sArray[mid].compareTo(word)>0) {
+			sBinarySearch(sArray,word,mid,sArray.length);
+		}
+		if(sArray[mid].compareTo(word)<0) {
+			sBinarySearch(sArray,word,0,mid);
+		}
+		if(sArray[mid].compareTo(word)==0) {
+			return mid;
+		}
+		return 0;
+	}
+	
+			
+		
+		
 
 }
 
