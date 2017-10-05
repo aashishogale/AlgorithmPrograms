@@ -372,9 +372,48 @@ public class Util {
 			}
 		}
 		
-		
-
+	
 	}
+
+	 public static int dayOfWeek(int day,int month,int year) {
+       
+         int m0,d0,y0,x;
+         
+         y0=year-(14-month)/12;
+         x=y0+y0/4-y0/100+y0/400;
+         m0=month+12*((14-month)/12)-2;
+         d0=(day+x+31*m0/12)%7;
+
+         return d0;
+   }
+
+	public static void temperatureConversion(double celsius,double fahrenheit) {
+
+        
+        
+        double fahr=(celsius*9/5)+32;
+        double cels=(fahrenheit-32)*5/9;
+
+       System.out.println(fahr+" F  "+cels+"  C");
+	}
+
+	public static double calculatePayment(double P,float Y,float R){
+
+        
+        
+
+        float n=Y*12;
+        double r=R/12/100;
+        
+        //apply formula
+        double payment=(P*r)/(1-Math.pow(1+r,-n));
+      
+       	return payment;
+}
+
+
+
+
 
 
 			
