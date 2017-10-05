@@ -1,6 +1,6 @@
 
-package com.bridgelabz.lib;
-import com.bridgelabz.lib.Util;
+package com.bridgelabz.Programs;
+import com.bridgelabz.Utility.Util;
 
 public class StringAnagram {
 	public static void main(String args[]) {

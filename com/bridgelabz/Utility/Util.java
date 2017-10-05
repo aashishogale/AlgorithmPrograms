@@ -2,7 +2,8 @@
 
 
 
-package com.bridgelabz.lib;
+package com.bridgelabz.Utility;
+import java.util.Scanner;
 public class Util {
 	
 	 
@@ -247,7 +248,7 @@ public class Util {
 		for(int i=1;i<array.length;i++) {
 			 temp=array[i];
 			j=i-1;	
-			while(j>=0&&temp>array[j]) {
+			while(j>=0&&temp<array[j]) {
 				array[j+1]=array[j];
 				j=j-1;				
 			}
@@ -265,7 +266,7 @@ public class Util {
 		for(int i=1;i<array.length;i++) {
 			temp=array[i];
 			j=i-1;	
-			while(j>=0&&temp.compareTo(array[j])>0) {
+			while(j>=0&&temp.compareTo(array[j])<0) {
 				array[j+1]=array[j];
 				j=j-1;				
 			}
@@ -278,38 +279,77 @@ public class Util {
 	public static int iBinarySearch(int []sArray,int number,int low,int high) {
 	
 		
-		int mid=low+high/2;
-		if(sArray[mid]>number) {
-			iBinarySearch(sArray,number,mid,sArray.length);
-		}
+		int mid=(low+high)/2;
 		if(sArray[mid]<number) {
-			iBinarySearch(sArray,number,0,mid);
+			return(iBinarySearch(sArray,number,mid,sArray.length));
+		}
+		if(sArray[mid]>number) {
+			return(iBinarySearch(sArray,number,0,mid));
 		}
 		if(sArray[mid]==number) {
 			return mid;
 		}
+		else
 		return 0;
 	}
 
 	public static int sBinarySearch(String []sArray,String word,int low,int high) {
 	
 		
-		int mid=low+high/2;
+		int mid=(low+high)/2;
 		if(sArray[mid].compareTo(word)>0) {
-			sBinarySearch(sArray,word,mid,sArray.length);
+			return(sBinarySearch(sArray,word,mid,sArray.length));
 		}
 		if(sArray[mid].compareTo(word)<0) {
-			sBinarySearch(sArray,word,0,mid);
+			return(sBinarySearch(sArray,word,0,mid));
 		}
 		if(sArray[mid].compareTo(word)==0) {
 			return mid;
 		}
+		else
 		return 0;
 	}
+
 	
+		public static long[] descBubbleSort(long []array) {
+		
+		long temp;
+		
+		for(int i=0;i<array.length;i++) {
+			for(int j=1;j<array.length-i;j++) {
+				if(array[j-1]<array[j]) {
+					temp=array[j-1];
+					array[j-1]=array[j];
+					array[j]=temp;
+                 }			
+			}
+		}
+		
+		
+	return array;
+	}
 			
 		
+	
+
+	public static void binarySearch(int low,int high) {
+		int middle=(low+high)/2;
+		Scanner sc=new Scanner(System.in);
+		char choice;
+		if(low<high) {
+			System.out.println("is your number between "+low+"and"+middle);
+			choice=sc.next().charAt(0);
+			if(choice=='y')
+				binarySearch(low,middle);
+			else
+				binarySearch(middle+1,high);
+		}
+			else if(low==high)
+			
+			System.out.println("the no is "+low);
 		
+		
+	}	
 
 }
 
