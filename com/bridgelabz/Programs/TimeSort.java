@@ -62,22 +62,22 @@ public class TimeSort {
 		}
 			
 		
-		int ikey=43;
-		String skey="afgddj";
+		int ikey=14;
+		String skey="abc";
 		int []barray={21,14,15,43,54};
 		String []bsArray={"abc","bcdef","afgddj","abcdbd","grda"};
 		bIntSortArray=Util.iBubbleSort(barray);
 		bStrSortArray=Util.sBubbleSort(bsArray);
 		
 		start=System.nanoTime();
-		System.out.println("number found at index"+Util.iBinarySearch(barray,ikey,0,array.length));
+		System.out.println("number found at index"+Util.iBinarySearch(bIntSortArray,ikey,0,array.length));
 		elapsedTime=System.nanoTime()-start;
 		System.out.println("integer binary search "+elapsedTime);
 		timearr[j]=elapsedTime;
 		j++;
 		
 		start=System.nanoTime();
-		System.out.println("String found at index"+Util.sBinarySearch(bsArray,skey,0,sArray.length));
+		System.out.println("String found at index"+Util.sBinarySearch(bStrSortArray,skey,0,sArray.length));
 		elapsedTime=System.nanoTime()-start;
 		System.out.println("integer binary search "+elapsedTime);
 		timearr[j]=elapsedTime;

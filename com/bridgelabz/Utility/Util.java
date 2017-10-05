@@ -297,15 +297,18 @@ public class Util {
 	
 		
 		int mid=(low+high)/2;
-		if(sArray[mid].compareTo(word)>0) {
-			return(sBinarySearch(sArray,word,mid,sArray.length));
-		}
-		if(sArray[mid].compareTo(word)<0) {
-			return(sBinarySearch(sArray,word,0,mid));
-		}
-		if(sArray[mid].compareTo(word)==0) {
-			return mid;
-		}
+		
+
+			if(sArray[mid].compareTo(word)<0) {
+				return(sBinarySearch(sArray,word,mid,sArray.length));
+			}
+			if(sArray[mid].compareTo(word)>0) {
+				return(sBinarySearch(sArray,word,0,mid));
+			}
+		
+		 if(sArray[mid].compareTo(word)==0) {
+				return mid;
+			}
 		else
 		return 0;
 	}
@@ -350,6 +353,31 @@ public class Util {
 		
 		
 	}	
+
+	public static void noteCheck(int []notesNo,int change,int pos) {
+		int []noteList={1000,500,100,50,10,5,2,1};
+	
+		if(pos<noteList.length)
+		{
+			if(change<noteList[pos]) {
+				pos++;
+				noteCheck(notesNo,change,pos);
+				
+			}
+			else {
+				change=change-noteList[pos];
+				notesNo[pos]++;
+				
+				noteCheck(notesNo,change,pos);
+			}
+		}
+		
+		
+
+	}
+
+
+			
 
 }
 
