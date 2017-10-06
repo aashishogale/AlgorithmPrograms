@@ -98,7 +98,7 @@ public class Util {
 		}
 
 	  //funtion to check prime no
-	      public static boolean checkPrime(int n) {
+	    public static boolean checkPrime(int n) {
 	     
 
 	      //condition to check if no less than two
@@ -466,9 +466,159 @@ public class Util {
 
 
 
+		public static void binary(int nNumber) {
+
+	          int mDivision = 1;
+
+		      int counter= 0;
 
 
+		      //find the power of 2 from small to large
+
+
+		      while(mDivision <= nNumber/2) {
+		         mDivision *=2;
+
+
+		       }
+		 
+		     //prints the binary number from large to small
+
+		      while(mDivision > 0) {
+
+		          
+		         if(counter==4) {
+		            System.out.print(" ");
+		            counter=0;
+		          
+		          } 
+
+
+
+		         if(nNumber < mDivision) {
+
+		            System.out.print("0");
+		            counter++; 
+		         }
+
+		          else {
+		            
+		            System.out.print("1");
+
+		            nNumber -= mDivision;
+
+		            counter++;
+		         }
+			
+		         mDivision /= 2;
+
+		      }
+
+		      System.out.println();
+
+	}
+		
+		public static void binarySwap(int nNumber) {
+		
+
+
+		      int mDivision = 1;
+
+		      int counter= 0;
+		      int convertCounter=7;
+		      int checkDigit,finalNumber=0;
+		      String newNumber="";
+		      String upperNibble,lowerNibble;//stores 4 bits of each binary number
+
+
+		      //find the power of 2 from small to large
+
+
+		      while(mDivision <= nNumber/2)
+		 {
+		         mDivision *=2;
+
+
+		       }
+		 
+		     //prints the binary number from large to small
+
+		      while(mDivision > 0) {
+
+		          
+		         if(counter==4) {
+		            System.out.print(" ");
+		            counter=0;
+		          
+		          } 
+
+
+
+		         if(nNumber < mDivision) {
+
+		            System.out.print("0");
+		            newNumber+="0";
+		            counter++
+		; 
+		         }
+
+		          else {
+		            
+		            System.out.print("1");
+
+		            newNumber+="1";
+		            nNumber -= mDivision;
+
+		            counter++;
+		         }
+			
+		         mDivision /= 2;
+
+		      }
+
+		     System.out.println("no befor swapping"+newNumber);
+		     upperNibble=newNumber.substring(4,8);
+		     lowerNibble=newNumber.substring(0,4);
+		      
+		     newNumber=upperNibble+lowerNibble;
+		     System.out.println();
+		     System.out.println("no after swapping"+newNumber);
+		      
+		     
+		    
+		     for(int i=0;i<newNumber.length();i++) {
+		     
+		    	 checkDigit=Integer.parseInt(Character.toString(newNumber.charAt(i)));
+		    	 if(checkDigit==1) {
+		      
+		         finalNumber+=(int)Math.pow(2,convertCounter);
+		         convertCounter--;
+		     }
+
+		       	else {
+
+		        convertCounter--;
+
+
+		       	}
+		}
+
+		    
+		     
+
+		     
+
+		      System.out.println(finalNumber);
+
+		}
+		
+	
 				
 
 
 }
+
+				
+
+
+

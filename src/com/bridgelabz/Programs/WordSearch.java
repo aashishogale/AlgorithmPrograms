@@ -12,7 +12,8 @@ public class WordSearch {
 		String str;
 		
 
-		BufferedReader breader=new BufferedReader(new FileReader("/home/bridgeit/Desktop/aashish-bridgelabz/Algorithm-Programs/test.txt"));
+		BufferedReader breader=new BufferedReader(new FileReader("/home/bridgeit"
+				+ "/Desktop/aashish-bridgelabz/Algorithm-Programs/test.txt"));
 	
 		str=breader.readLine();
 		System.out.println(str);
