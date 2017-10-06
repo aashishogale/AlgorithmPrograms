@@ -430,27 +430,35 @@ public class Util {
 			int q=mid+1;
 			String []tArray=new String[end-start+1];
 			int k=0;
+			
 			for(int i=start;i<=end;i++) {
 				
+				
+				
+			
 				if(p>mid) {
-					tArray[k++]=tArray[q++];
+					tArray[k++]=array[q++];
 				}
 				
 				else if(q>end) {
-					tArray[k++]=tArray[p++];
+					tArray[k++]=array[p++];
 				}
 				
-				else if(tArray[p].compareTo(tArray[q])<0) {
+				
+				else if(array[p].compareTo(array[q])<0) {
 					
-					tArray[k++]=tArray[p++];
+					tArray[k++]=array[p++];
+					
 				}
 				else {
-					tArray[k++]=tArray[q++];
+					tArray[k++]=array[q++];
 				}
 			}
 
 			for(int i=0;i<k;i++) {
-				array[start++]=tArray[i++];	
+				array[start++]=tArray[i];
+				
+				
 
 			}
 		}

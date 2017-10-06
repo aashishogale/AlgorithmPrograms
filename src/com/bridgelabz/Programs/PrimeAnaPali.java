@@ -6,7 +6,7 @@ public class PrimeAnaPali {
 		
 		System.out.println("Palindrome");
 
-		int palcount=0,anacount=0;
+		
 		for(int i=10;i<1000;i++) {
 			if(Util.checkPrime(i)) {
 				if(Util.checkPalindrome(i)) {
