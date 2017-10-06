@@ -1,3 +1,13 @@
+/***************************************************************************
+* Purpose : To create class for prime range
+*
+* @author   Aashish
+* @version  1.0
+* @since    05-10-2017
+****************************************************************************/
+
+
+
 package com.bridgelabz.Programs;
 import com.bridgelabz.Utility.Util;
 

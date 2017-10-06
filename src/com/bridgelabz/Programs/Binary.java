@@ -1,3 +1,11 @@
+/***************************************************************************
+* Purpose : To create class for binary conversion
+*
+* @author   Aashish
+* @version  1.0
+* @since    05-10-2017
+****************************************************************************/
+
 package com.bridgelabz.Programs;
 
 import java.util.Scanner;

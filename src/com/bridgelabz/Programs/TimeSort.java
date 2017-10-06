@@ -1,3 +1,12 @@
+/***************************************************************************
+* Purpose : To create class for find the time required for array sorting
+*
+* @author   Aashish
+* @version  1.0
+* @since    05-10-2017
+****************************************************************************/
+
+
 package com.bridgelabz.Programs;
 import com.bridgelabz.Utility.Util;
 public class TimeSort {

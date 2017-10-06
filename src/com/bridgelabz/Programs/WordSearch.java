@@ -1,3 +1,13 @@
+/***************************************************************************
+* Purpose : To create class for Word search
+*
+* @author   Aashish
+* @version  1.0
+* @since    05-10-2017
+****************************************************************************/
+
+
+
 package com.bridgelabz.Programs;
 import com.bridgelabz.Utility.Util;
 import java.io.BufferedReader;

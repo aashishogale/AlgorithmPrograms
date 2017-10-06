@@ -1,3 +1,12 @@
+/***************************************************************************
+* Purpose : To create class for exchanging nibbles
+*
+* @author   Aashish
+* @version  1.0
+* @since    05-10-2017
+****************************************************************************/
+
+
 package com.bridgelabz.Programs;
 
 import java.util.Scanner;
