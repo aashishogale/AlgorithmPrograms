@@ -142,25 +142,26 @@ public class Util {
 		return array;
 	}
 
-	// method for checking if numbers are anagram
-	public static boolean checkAnagram(int number1, int number2) {
-		int tempno = number1;
-		int count1 = 0, count2 = 0, count = 0;
+	public static int numberCount(int number) {
+		int count = 0;
+		int tempno = number;
 
 		// find the number of digits of first number
 		while (tempno != 0) {
 			tempno = tempno / 10;
-			count1++;
+			count++;
 
 		}
-		tempno = number2;
+		return count;
 
-		// find the number of digits second number
-		while (tempno != 0) {
-			tempno = tempno / 10;
-			count2++;
+	}
 
-		}
+	// method for checking if numbers are anagram
+	public static boolean checkAnagram(int number1, int number2) {
+	
+		int count1 = numberCount(number1);
+		int count2 = numberCount(number2);
+		int count = 0;
 
 		if (count1 != count2)
 			return false;
@@ -579,26 +580,17 @@ public class Util {
 		}
 	}
 
-	public static void startTime(int [][]array,int currentTime) {
+	public static void startTime(int[][] array, int currentTime) {
 
 		currentTime++;
-		int i=0;
-		int j=0;
+		int i = 0;
+		int j = 0;
 		array[i][j]--;
-		array[i+1][j+1]--;
-		if((array[i][j]==0)&&(array[i][j]>array[i+1][j])) {
-			
-			
-			
+		array[i + 1][j + 1]--;
+		if ((array[i][j] == 0) && (array[i][j] > array[i + 1][j])) {
 
-
-
-
-
-
+		}
 
 	}
-
-}
 
 }
