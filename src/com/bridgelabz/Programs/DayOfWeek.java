@@ -2,7 +2,7 @@ package com.bridgelabz.Programs;
 
 import com.bridgelabz.Utility.Util;
 
-public class DayOfWeek {
+ class DayOfWeek {
 	public static void main(String args[]) {
 
 		int day = Integer.parseInt(args[0]);

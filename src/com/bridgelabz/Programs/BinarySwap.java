@@ -18,7 +18,7 @@ public class BinarySwap {
 
 		int number;
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter nogretaer or equal to 128");
+		System.out.println("enter no");
 		number=Integer.parseInt(sc.nextLine());
 		Util.binarySwap(number);
 	}

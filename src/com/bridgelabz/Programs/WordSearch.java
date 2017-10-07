@@ -24,11 +24,13 @@ public class WordSearch {
 		str = breader.readLine();
 		System.out.println(str);
 		String[] array = str.split(",");
+		Util.sBubbleSort(array);
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}
 		Util.sBubbleSort(array);
-		System.out.println("Index at " + Util.sBinarySearch(array, "aashish", 0, array.length));
+		
+		System.out.println("Index at " + Util.sBinarySearch(array, "sujit", 0, array.length));
 
 	}
 }

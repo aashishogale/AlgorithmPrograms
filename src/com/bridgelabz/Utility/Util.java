@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Util {
 
 	// convert to character array
+	/**
+	 * @param firArray
+	 * @param firAscii
+	 * @return
+	 */
 	public static int[] convert(char firArray[], int firAscii[]) {
 		for (int i = 0; i < firArray.length; i++) {
 
@@ -16,6 +21,7 @@ public class Util {
 	}
 
 	// sort the character array
+	
 	public static int[] sort(int firAscii[]) {
 		int temp = 0;
 		for (int i = 0; i < firAscii.length; i++) {
@@ -488,7 +494,8 @@ public class Util {
 	public static void binarySwap(int nNumber) {
 
 		int mDivision = 1;
-
+		int padding=32;
+		String padd=null;
 		int counter = 0;
 		int convertCounter = 7;
 		int checkDigit, finalNumber = 0;
@@ -507,14 +514,14 @@ public class Util {
 		// prints the binary number from large to small
 
 		while (mDivision > 0) {
-
-			if (counter == 4) {
+			rem=nNumber/2;
+			if (counter% 4==0) {
 				System.out.print(" ");
 				counter = 0;
 
 			}
 
-			if (nNumber < mDivision) {
+			if (rem=) {
 
 				System.out.print("0");
 				newNumber += "0";
@@ -534,6 +541,14 @@ public class Util {
 			mDivision /= 2;
 
 		}
+		if(counter%4!=0) {
+			while (padding>counter) {
+				padd+="0";
+				padding--;
+			}
+		}
+		
+		
 
 		System.out.println("no befor swapping" + newNumber);
 		upperNibble = newNumber.substring(4, 8);
