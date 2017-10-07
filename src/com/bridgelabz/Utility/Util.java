@@ -156,9 +156,20 @@ public class Util {
 
 	}
 
+	public static void convertIntArray(int[] array, int number) {
+		int i = 0;
+
+		while (number != 0) {
+			array[i] = number % 10;
+			number = number / 10;
+			i++;
+		}
+
+	}
+
 	// method for checking if numbers are anagram
 	public static boolean checkAnagram(int number1, int number2) {
-	
+
 		int count1 = numberCount(number1);
 		int count2 = numberCount(number2);
 		int count = 0;
@@ -169,26 +180,16 @@ public class Util {
 		// convert the numbers to array
 		int arr1[] = new int[count1];
 		int arr2[] = new int[count2];
-		int i = 0;
-		while (number1 != 0) {
-			arr1[i] = number1 % 10;
-			number1 = number1 / 10;
-			i++;
-		}
-		i = 0;
-		while (number2 != 0) {
-			arr2[i] = number2 % 10;
 
-			number2 = number2 / 10;
-			i++;
-		}
+		convertIntArray(arr1, number1);
+		convertIntArray(arr2, number2);
 
 		// Sort the integer
 		arr1 = sortInt(arr1);
 		arr2 = sortInt(arr2);
 
 		// check if digits are equal
-		for (i = 0; i < arr1.length; i++) {
+		for (int i = 0; i < arr1.length; i++) {
 			if (arr1[i] == arr2[i]) {
 				count++;
 			}
