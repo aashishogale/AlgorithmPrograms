@@ -20,6 +20,10 @@ public class BinarySwap {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter no");
 		number=Integer.parseInt(sc.nextLine());
-		Util.binarySwap(number);
+		String sbinary=Util.binary(number);
+		System.out.println(sbinary);
+		String swapped=Util.binarySwap(sbinary);
+		System.out.println(swapped);
+		System.out.println(Util.binaryToDecimal(swapped));
 	}
 }

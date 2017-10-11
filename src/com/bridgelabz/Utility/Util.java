@@ -7,9 +7,10 @@ public class Util {
 
 	// convert to character array
 	/**
+	 * purpose:convert to character array
 	 * @param firArray
 	 * @param firAscii
-	 * @return
+	 * @return firAscii
 	 */
 	public static int[] convert(char firArray[], int firAscii[]) {
 		for (int i = 0; i < firArray.length; i++) {
@@ -21,6 +22,12 @@ public class Util {
 	}
 
 	// sort the character array
+	/**
+	 * purpose:sort character array
+	 *
+	 * @param firAscii
+	 * @return firAscii
+	 */
 	
 	public static int[] sort(int firAscii[]) {
 		int temp = 0;
@@ -39,26 +46,39 @@ public class Util {
 	}
 
 	// convert to lower case
+	/**
+	 * purpose:convert to lower case
+	 * @param string1
+	 * 
+	 * @return string2
+	 */
 	public static String toLowerCase(String string1) {
 
-		String s2 = "", s3 = "";
+		String string2 = "", string3 = "";
 		int aChar = 0;
 		for (int i = 0; i < string1.length(); i++) {
 
 			aChar = (int) string1.charAt(i);
 			if (65 <= aChar && aChar <= 90) {
-				s3 = Character.toString((char) ((aChar + 32)));
-				s2 = s2 + s3;
+				string3 = Character.toString((char) ((aChar + 32)));
+				string2 = string2 + string3;
 			}
 
 			else {
-				s3 = Character.toString((char) ((aChar)));
-				s2 = s2 + s3;
+				string3 = Character.toString((char) ((aChar)));
+				string2 = string2 + string3;
 
 			}
 		}
-		return s2;
+		return string2;
 	}
+	
+	/**
+	 * purpose:check for anagram
+	 * @param firString
+	 * @param secString
+	 * @return boolean
+	 */
 
 	public static boolean isAnagram(String firString, String secString) {
 
@@ -97,24 +117,36 @@ public class Util {
 	}
 
 	// funtion to check prime no
-	public static boolean checkPrime(int n) {
+	/**
+	 * purpose:check if no is prime
+	 * @param number
+	 *
+	 * @return boolean
+	 */
+	public static boolean checkPrime(int number) {
 
 		// condition to check if no less than two
-		if (n < 2) {
+		if (number < 2) {
 			return false;
 		}
 
 		// for loop to for checkin prime no
-		for (int factor = 2; factor * factor <= n; factor++) {
+		for (int factor = 2; factor * factor <= number; factor++) {
 			// if factor divides evenly into n, n is not prime, so break out of
 			// loop
-			if (n % factor == 0) {
+			if (number % factor == 0) {
 				return false;
 
 			}
 		} // End of for loop
 		return true;
 	}
+	/**
+	 * purpose:check for palindrome
+	 * @param number
+	 *  
+	 * @return boolean
+	 */
 
 	public static boolean checkPalindrome(int number) {
 
@@ -132,6 +164,12 @@ public class Util {
 	}
 
 	// method for integer sorting
+	/**
+	 * purpose:sort int
+	 * @param array
+	 *
+	 * @return array
+	 */
 	public static int[] sortInt(int[] array) {
 		int temp;
 
@@ -147,6 +185,12 @@ public class Util {
 
 		return array;
 	}
+	/**
+	 * purpose:count the number of digits
+	 * @param number
+	 *
+	 * @return count
+	 */
 
 	public static int numberCount(int number) {
 		int count = 0;
@@ -161,6 +205,12 @@ public class Util {
 		return count;
 
 	}
+	/**
+	 * purpose:convert number toi nteger array
+	 * @param array
+	 * @param number
+	 * @return
+	 */
 
 	public static void convertIntArray(int[] array, int number) {
 		int i = 0;
@@ -174,6 +224,12 @@ public class Util {
 	}
 
 	// method for checking if numbers are anagram
+	/**
+	 * purpose check if numbers are anagram
+	 * @param number1;
+	 * @param number2;
+	 * @return boolean
+	 */
 	public static boolean checkAnagram(int number1, int number2) {
 
 		int count1 = numberCount(number1);
@@ -205,6 +261,12 @@ public class Util {
 	}
 
 	// method for bubble sort for integer
+	/**
+	 * purpose:bubblesort int
+	 * @param array
+	 *
+	 * @return array
+	 */
 	public static int[] iBubbleSort(int[] array) {
 		int temp;
 
@@ -222,6 +284,13 @@ public class Util {
 	}
 
 	// method for checking string bubblesort
+	/**
+	 * purpose:bubblesort string
+	 * @param array
+	 *
+	 * @return array
+	 */
+	
 	public static String[] sBubbleSort(String[] array) {
 		String temp;
 
@@ -239,6 +308,12 @@ public class Util {
 	}
 
 	// method for integer insertion sort
+	/**
+	 * purpose:insertionsort int
+	 * @param array
+	 *
+	 * @return array
+	 */
 	public static int[] iInsertionSort(int[] array) {
 
 		int j;
@@ -257,6 +332,12 @@ public class Util {
 	}
 
 	// method for string insertion sort
+	/**
+	 * purpose:insertionsort String
+	 * @param array
+	 *
+	 * @return array
+	 */
 	public static String[] sInsertionSort(String[] array) {
 
 		int j;
@@ -275,6 +356,12 @@ public class Util {
 	}
 
 	// method for binary search
+	/**
+	 * purpose:binary search integer
+	 * @param sarray,number,low,high
+	 *
+	 * @return array
+	 */
 	public static int iBinarySearch(int[] sArray, int number, int low, int high) {
 
 		int mid = (low + high) / 2;
@@ -291,6 +378,12 @@ public class Util {
 	}
 
 	// method for finding String binary search
+	/**
+	 * purpose:binary search String
+	 * @param sarray,number,low,high
+	 *
+	 * @return array
+	 */
 	public static int sBinarySearch(String[] sArray, String word, int low, int high) {
 
 		int mid = (low + high) / 2;
@@ -309,6 +402,13 @@ public class Util {
 	}
 
 	// method for descending bubble sort
+	/**
+	 * purpose:bubble sort integer in descending
+	 * @param array
+	 *
+	 * @return array
+	 */
+	
 	public static long[] descBubbleSort(long[] array) {
 
 		long temp;
@@ -327,6 +427,12 @@ public class Util {
 	}
 
 	// method for finding the number with user input
+	/**
+	 * purpose:binary search integer
+	 * @param,low,high
+	 *
+	 * @return 
+	 */
 	public static void binarySearch(int low, int high) {
 		int middle = (low + high) / 2;
 		Scanner sc = new Scanner(System.in);
@@ -345,6 +451,12 @@ public class Util {
 	}
 
 	// method for vending machine
+	/**
+	 * purpose:Vending machine
+	 * @param notesNo,change,pos
+	 *
+	 * @return array
+	 */
 	public static void noteCheck(int[] notesNo, int change, int pos) {
 
 		int[] noteList = { 1000, 500, 100, 50, 10, 5, 2, 1 };
@@ -365,6 +477,12 @@ public class Util {
 	}
 
 	// method for calculating day of week
+	/**
+	 * purpose:calculate day of week
+	 * @param day,month,year
+	 *
+	 * @return day
+	 */
 	public static int dayOfWeek(int day, int month, int year) {
 
 		int m0, d0, y0, x;
@@ -378,6 +496,12 @@ public class Util {
 	}
 
 	// method for temperature conversion
+	/**
+	 * purpose:convert temperature
+	 * @param celsius,fahrenheit
+	 *
+	 * @return 
+	 */
 	public static void temperatureConversion(double celsius, double fahrenheit) {
 
 		double fahr = (celsius * 9 / 5) + 32;
@@ -399,6 +523,12 @@ public class Util {
 	}
 
 	// method for splitting array for merge sort
+	/**
+	 * purpose:split the array
+	 * @param array,start,end
+	 *
+	 * @return array
+	 */
 	public static void mergeSort(String[] array, int start, int end) {
 
 		int mid = (start + end) / 2;
@@ -414,6 +544,12 @@ public class Util {
 	}
 
 	// method for merging the split array
+	/**
+	 * purpose:mergesort
+	 * @param sarray,start,mid,end
+	 *
+	 * @return 
+	 */
 	public static void merge(String[] array, int start, int mid, int end) {
 
 		int p = start;
@@ -447,136 +583,69 @@ public class Util {
 	}
 
 	// method for converting decimal to binary
-	public static void binary(int nNumber) {
+	/**
+	 * purpose:convert to binary
+	 * @param number
+	 *
+	 * @return binary
+	 */
+	public static String binary(int number) {
 
-		int mDivision = 1;
+		int rem;
+		String bin[] = { "0", "1" };
+		String binary = "";
+		int padding = 0;
+		while (number > 0 || padding % 8 != 0) {
+			rem = number % 2;
+			binary = bin[rem] + binary;
+			number = number / 2;
+			padding++;
+			if (padding % 4 == 0 && number != 0) {
+				binary = " " + binary;
 
-		int counter = 0;
-
-		// find the power of 2 from small to large
-
-		while (mDivision <= nNumber / 2) {
-
-			mDivision *= 2;
-
+			}
 		}
-
-		// prints the binary number from large to small
-
-		while (mDivision > 0) {
-
-			if (counter == 4) {
-				System.out.print(" ");
-				counter = 0;
-
-			}
-
-			if (nNumber < mDivision) {
-
-				System.out.print("0");
-				counter++;
-			}
-
-			else {
-				System.out.print("1");
-
-				nNumber -= mDivision;
-				counter++;
-			}
-
-			mDivision /= 2;
-		}
-		System.out.println();
-
-	}
+		return binary;
+}
+	
 
 	// method for binary swapping using nibble
-	public static void binarySwap(int nNumber) {
+	/**
+	 * purpose:binary swap 
+	 * @param binary
+	 *
+	 * @return decimal
+	 */
+	public static String binarySwap(String binary) {
 
-		int mDivision = 1;
-		int padding=32;
-		String padd=null;
-		int counter = 0;
-		int convertCounter = 7;
-		int checkDigit, finalNumber = 0;
-		String newNumber = "";
-
-		// stores 4 bits of each binary number
-		String upperNibble, lowerNibble;
-
-		// find the power of 2 from small to large
-
-		while (mDivision <= nNumber / 2) {
-
-			mDivision *= 2;
-		}
-
-		// prints the binary number from large to small
-
-		while (mDivision > 0) {
-			rem=nNumber/2;
-			if (counter% 4==0) {
-				System.out.print(" ");
-				counter = 0;
-
-			}
-
-			if (rem=) {
-
-				System.out.print("0");
-				newNumber += "0";
-				counter++;
-			}
-
-			else {
-
-				System.out.print("1");
-
-				newNumber += "1";
-				nNumber -= mDivision;
-
-				counter++;
-			}
-
-			mDivision /= 2;
-
-		}
-		if(counter%4!=0) {
-			while (padding>counter) {
-				padd+="0";
-				padding--;
-			}
-		}
-		
-		
-
-		System.out.println("no befor swapping" + newNumber);
-		upperNibble = newNumber.substring(4, 8);
-		lowerNibble = newNumber.substring(0, 4);
-
-		newNumber = upperNibble + lowerNibble;
-		System.out.println();
-		System.out.println("no after swapping" + newNumber);
-
-		for (int i = 0; i < newNumber.length(); i++) {
-
-			checkDigit = Integer.parseInt(Character.toString(newNumber.charAt(i)));
-			if (checkDigit == 1) {
-
-				finalNumber += (int) Math.pow(2, convertCounter);
-				convertCounter--;
-			}
-
-			else {
-
-				convertCounter--;
-
-			}
-		}
-
-		System.out.println(finalNumber);
+		binary = binary.replaceAll(" ", "");
+		String lowerNibble = binary.substring(0, 4);
+		String upperNibble = binary.substring(4, 8);
+		String swappedBinary = upperNibble + lowerNibble;
+       return swappedBinary;
 
 	}
+	/**
+	 * purpose:convert to decimal
+	 * @param binary
+	 *
+	 * @return decimal
+	 */
+	
+	public static int binaryToDecimal(String binary) {
+		int decimal = 0, power = 0;
+		binary = binary.replaceAll(" ", "");
+		int index = binary.length() - 1;
+		while (index >= 0) {
+			decimal = decimal+(int)(Integer.parseInt(binary.charAt(index) + "") * Math
+					.pow(2, power));
+			power++;
+			index--;
+		}
+		return decimal;
+
+}
+	
 
 	public static void deadLine(int[][] array, int rows, int columns) {
 

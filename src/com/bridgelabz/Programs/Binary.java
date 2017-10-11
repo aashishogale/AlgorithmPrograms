@@ -19,7 +19,7 @@ public class Binary {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter no");
 		number = Integer.parseInt(sc.nextLine());
-		Util.binary(number);
+		System.out.println(Util.binary(number));
 	}
 
 }
