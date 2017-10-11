@@ -10,7 +10,10 @@
 package com.bridgelabz.Programs;
 
 import com.bridgelabz.Utility.Util;
-
+/**
+ * @author aashish
+ *
+ */
 public class PrimeAnaPali {
 	public static void main(String args[]) {
 

@@ -12,6 +12,10 @@ import java.util.Scanner;
 
 import com.bridgelabz.Utility.Util;
 
+/**
+ * @author aashish
+ *
+ */
 public class Binary {
 	public static void main(String srgs[]) {
 

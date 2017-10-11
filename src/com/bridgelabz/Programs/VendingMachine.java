@@ -9,6 +9,10 @@
 package com.bridgelabz.Programs;
 
 import com.bridgelabz.Utility.Util;
+/**
+ * @author aashish
+ *
+ */
 import java.util.Scanner;
 
 public class VendingMachine {

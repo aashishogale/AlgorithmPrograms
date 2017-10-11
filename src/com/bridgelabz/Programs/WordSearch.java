@@ -12,7 +12,10 @@ import com.bridgelabz.Utility.Util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+/**
+ * @author aashish
+ *
+ */
 public class WordSearch {
 	public static void main(String args[]) throws IOException {
 

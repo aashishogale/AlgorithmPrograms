@@ -11,7 +11,10 @@ package com.bridgelabz.Programs;
 import java.util.Scanner;
 
 import com.bridgelabz.Utility.Util;
-
+/**
+ * @author aashish
+ *
+ */
 public class MergeSort {
 	public static void main(String args[]) {
 		String[] array = new String[4];

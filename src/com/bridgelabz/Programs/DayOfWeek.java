@@ -1,6 +1,10 @@
 package com.bridgelabz.Programs;
 
 import com.bridgelabz.Utility.Util;
+/**
+ * @author aashish
+ *
+ */
 
  class DayOfWeek {
 	public static void main(String args[]) {
