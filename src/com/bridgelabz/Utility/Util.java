@@ -262,17 +262,18 @@ public class Util {
 
 	// method for bubble sort for integer
 	/**
-	 * purpose:bubblesort int
+	 * purpose:bubblesort 
 	 * @param array
+	 * @return 
 	 *
 	 * @return array
 	 */
-	public static int[] iBubbleSort(int[] array) {
-		int temp;
+	public static <T extends Comparable<T>> void iBubbleSort(T[] array) {
+		T temp;
 
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 1; j < array.length - i; j++) {
-				if (array[j - 1] > array[j]) {
+				if (array[j - 1] .compareTo(array[j])>0) {
 					temp = array[j - 1];
 					array[j - 1] = array[j];
 					array[j] = temp;
@@ -280,68 +281,25 @@ public class Util {
 			}
 		}
 
-		return array;
+		
 	}
 
 	// method for checking string bubblesort
-	/**
-	 * purpose:bubblesort string
-	 * @param array
-	 *
-	 * @return array
-	 */
 	
-	public static String[] sBubbleSort(String[] array) {
-		String temp;
 
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 1; j < array.length - i; j++) {
-				if (array[j - 1].compareTo(array[j]) > 0) {
-					temp = array[j - 1];
-					array[j - 1] = array[j];
-					array[j] = temp;
-				}
-			}
-		}
 
-		return array;
-	}
 
-	// method for integer insertion sort
 	/**
-	 * purpose:insertionsort int
+	 * purpose:insertionsort 
 	 * @param array
+	 * @return 
 	 *
 	 * @return array
 	 */
-	public static int[] iInsertionSort(int[] array) {
+	public static <T extends Comparable<T>> void sInsertionSort(T[] array) {
 
 		int j;
-		int temp;
-		for (int i = 1; i < array.length; i++) {
-			temp = array[i];
-			j = i - 1;
-			while (j >= 0 && temp < array[j]) {
-				array[j + 1] = array[j];
-				j = j - 1;
-			}
-			array[j + 1] = temp;
-		}
-
-		return array;
-	}
-
-	// method for string insertion sort
-	/**
-	 * purpose:insertionsort String
-	 * @param array
-	 *
-	 * @return array
-	 */
-	public static String[] sInsertionSort(String[] array) {
-
-		int j;
-		String temp;
+	T temp;
 		for (int i = 1; i < array.length; i++) {
 			temp = array[i];
 			j = i - 1;
@@ -352,7 +310,7 @@ public class Util {
 			array[j + 1] = temp;
 		}
 
-		return array;
+	
 	}
 
 	// method for binary search
@@ -362,7 +320,7 @@ public class Util {
 	 *
 	 * @return array
 	 */
-	public static int iBinarySearch(int[] sArray, int number, int low, int high) {
+	public static int iBinarySearch(Integer[] sArray, int number, int low, int high) {
 
 		int mid = (low + high) / 2;
 		if (sArray[mid] < number) {
@@ -405,17 +363,18 @@ public class Util {
 	/**
 	 * purpose:bubble sort integer in descending
 	 * @param array
+	 * @return 
 	 *
 	 * @return array
 	 */
 	
-	public static long[] descBubbleSort(long[] array) {
+	public static <T extends Comparable<T>> void descBubbleSort(T[] array) {
 
-		long temp;
+	T temp;
 
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 1; j < array.length - i; j++) {
-				if (array[j - 1] < array[j]) {
+				if (array[j - 1].compareTo(array[j]) <0) {
 					temp = array[j - 1];
 					array[j - 1] = array[j];
 					array[j] = temp;
@@ -423,7 +382,7 @@ public class Util {
 			}
 		}
 
-		return array;
+	
 	}
 
 	// method for finding the number with user input
@@ -435,11 +394,11 @@ public class Util {
 	 */
 	public static void binarySearch(int low, int high) {
 		int middle = (low + high) / 2;
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		char choice;
 		if (low < high) {
 			System.out.println("is your number between " + low + "and" + middle);
-			choice = sc.next().charAt(0);
+			choice = scanner.next().charAt(0);
 			if (choice == 'y')
 				binarySearch(low, middle);
 			else
@@ -647,23 +606,6 @@ public class Util {
 }
 	
 
-	public static void deadLine(int[][] array, int rows, int columns) {
-
-		int temp;
-		int currentTime = 0;
-		for (int j = 0, i = 1; j < columns; j++) {
-			if (array[i][j] > array[i][j + 1]) {
-				temp = array[i][j];
-				array[i][j] = array[i][j + 1];
-				array[i][j + 1] = array[i][j];
-				i = 0;
-				temp = array[i][j];
-				array[i][j] = array[i][j + 1];
-				array[i][j + 1] = array[i][j];
-			}
-
-		}
-	}
 
 	public static void startTime(int[][] array, int currentTime) {
 

@@ -18,77 +18,75 @@ public class TimeSort {
 	public static void main(String args[]) {
 
 		long start, elapsedTime;
-		long timearr[] = new long[6];
+		Long timearr[] = new Long[6];
 		int j = 0;
 
-		int[] array = { 21, 14, 15, 43, 54 };
+		Integer[] array = { 21, 14, 15, 43, 54 };
 		String[] sArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-		int[] bIntSortArray = new int[array.length];
-		String[] bStrSortArray = new String[sArray.length];
+	
 
 		start = System.nanoTime();
-		bIntSortArray = Util.iBubbleSort(array);
+		Util.iBubbleSort(array);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("integer bubble sort " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
 		start = System.nanoTime();
-		bStrSortArray = Util.sBubbleSort(sArray);
+	 Util.iBubbleSort(sArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("String bubble sort " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
-		for (int i = 0; i < bIntSortArray.length; i++) {
-			System.out.println(bIntSortArray[i]);
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
 		}
-		for (int i = 0; i < bStrSortArray.length; i++) {
-			System.out.println(bStrSortArray[i]);
+		for (int i = 0; i < sArray.length; i++) {
+			System.out.println(sArray[i]);
 		}
 
-		int[] nArray = { 21, 14, 15, 43, 54 };
+	Integer[] nArray = { 21, 14, 15, 43, 54 };
 		String[] nsArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-		int[] iIntSortArray = new int[array.length];
-		String[] iStrSortArray = new String[sArray.length];
+	
 
 		start = System.nanoTime();
-		iIntSortArray = Util.iInsertionSort(nArray);
+		 Util.sInsertionSort(nArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("integer insertion sort " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
 		start = System.nanoTime();
-		iStrSortArray = Util.sInsertionSort(nsArray);
+	 Util.sInsertionSort(nsArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("String insertion sort " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
-		for (int i = 0; i < bIntSortArray.length; i++) {
-			System.out.println(iIntSortArray[i]);
+		for (int i = 0; i < nArray.length; i++) {
+			System.out.println(nArray[i]);
 		}
-		for (int i = 0; i < bStrSortArray.length; i++) {
-			System.out.println(iStrSortArray[i]);
+		for (int i = 0; i < nsArray.length; i++) {
+			System.out.println(nsArray[i]);
 		}
 
 		int ikey = 14;
 		String skey = "abc";
-		int[] barray = { 21, 14, 15, 43, 54 };
+		Integer[] barray = { 21, 14, 15, 43, 54 };
 		String[] bsArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-		bIntSortArray = Util.iBubbleSort(barray);
-		bStrSortArray = Util.sBubbleSort(bsArray);
+	 Util.iBubbleSort(barray);
+	 Util.iBubbleSort(bsArray);
 
 		start = System.nanoTime();
-		System.out.println("number found at index" + Util.iBinarySearch(bIntSortArray, ikey, 0, array.length));
+		System.out.println("number found at index" + Util.iBinarySearch(barray, ikey, 0, array.length));
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("integer binary search " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
 		start = System.nanoTime();
-		System.out.println("String found at index" + Util.sBinarySearch(bStrSortArray, skey, 0, sArray.length));
+		System.out.println("String found at index" + Util.sBinarySearch(bsArray, skey, 0, sArray.length));
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("integer binary search " + elapsedTime);
 		timearr[j] = elapsedTime;

@@ -18,11 +18,11 @@ import java.util.Scanner;
  */
 public class BubbleSort {
 	public static void main(String args[]) {
-		int[] array = new int[5];
+		Integer[] array = new Integer[5];
 		System.out.println("enter in Values");
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < array.length; i++) {
-			array[i] = Integer.parseInt(sc.nextLine());
+			array[i] = Integer.parseInt(scanner.nextLine());
 		}
 		Util.iBubbleSort(array);
 

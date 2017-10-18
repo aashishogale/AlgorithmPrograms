@@ -20,9 +20,9 @@ public class VendingMachine {
 		int change, sum = 0;
 		int[] arrayNoOfNotes = new int[8];
 
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter the change");
-		change = sc.nextInt();
+		change = scanner.nextInt();
 
 		Util.noteCheck(arrayNoOfNotes, change, 0);
 		for (int i = 0; i < arrayNoOfNotes.length; i++) {

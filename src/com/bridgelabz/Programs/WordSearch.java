@@ -19,19 +19,19 @@ import java.io.IOException;
 public class WordSearch {
 	public static void main(String args[]) throws IOException {
 
-		String str;
+		String fileString;
 
 		BufferedReader breader = new BufferedReader(
 				new FileReader("/home/bridgeit" + "/Desktop/aashish-bridgelabz/Algorithm-Programs/test.txt"));
 
-		str = breader.readLine();
-		System.out.println(str);
-		String[] array = str.split(",");
-		Util.sBubbleSort(array);
+		fileString = breader.readLine();
+		System.out.println(fileString);
+		String[] array = fileString.split(",");
+		Util.iBubbleSort(array);
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}
-		Util.sBubbleSort(array);
+		Util.iBubbleSort(array);
 		
 		System.out.println("Index at " + Util.sBinarySearch(array, "sujit", 0, array.length));
 

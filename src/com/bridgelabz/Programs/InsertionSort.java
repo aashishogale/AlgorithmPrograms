@@ -18,11 +18,11 @@ public class InsertionSort {
 	public static void main(String args[]) {
 		String[] array = new String[5];
 		System.out.println("enter String Values");
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < array.length; i++) {
-			array[i] = sc.nextLine();
+			array[i] = scanner.nextLine();
 		}
-		sc.close();
+		scanner.close();
 		Util.sInsertionSort(array);
 
 		System.out.println("Sorted String Values");

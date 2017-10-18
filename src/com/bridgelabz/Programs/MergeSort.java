@@ -18,14 +18,14 @@ import com.bridgelabz.Utility.Util;
 public class MergeSort {
 	public static void main(String args[]) {
 		String[] array = new String[4];
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println(array.length);
 		for (int i = 0; i < array.length; i++) {
 
-			array[i] = sc.nextLine();
+			array[i] = scanner.nextLine();
 		}
-		sc.close();
+		scanner.close();
 		Util.mergeSort(array, 0, array.length - 1);
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);

@@ -7,6 +7,8 @@
 ****************************************************************************/
 package com.bridgelabz.Programs;
 
+import java.util.Scanner;
+
 import com.bridgelabz.Utility.Util;
 /**
  * @author aashish
@@ -14,6 +16,21 @@ import com.bridgelabz.Utility.Util;
  */
 public class StringAnagram {
 	public static void main(String args[]) {
-		System.out.println(Util.isAnagram("abc", "bca"));
+		Scanner scanner=new Scanner(System.in);
+
+		System.out.println("enter String 1");
+		
+		String string1=scanner.nextLine();
+	System.out.println("enter String 2");
+		
+		String string2=scanner.nextLine();
+		
+		if(Util.isAnagram(string1, string2)) {
+			System.out.println("Strings are anagram");
+		}
+		else {
+			System.out.println("Strings are not anagram");
+			
+		}
 	}
 }

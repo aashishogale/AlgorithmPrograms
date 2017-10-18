@@ -20,9 +20,9 @@ public class Binary {
 	public static void main(String srgs[]) {
 
 		int number;
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter no");
-		number = Integer.parseInt(sc.nextLine());
+		number = Integer.parseInt(scanner.nextLine());
 		System.out.println(Util.binary(number));
 	}
 
