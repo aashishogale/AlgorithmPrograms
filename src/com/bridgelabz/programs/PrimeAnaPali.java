@@ -21,13 +21,13 @@ public class PrimeAnaPali {
 		System.out.println("Palindrome");
 
 		for (int i = 10; i < 1000; i++) {
-			if (Util.checkPrime(i)) {
-				if (Util.checkPalindrome(i)) {
+			if (Util.checkPrime(i)&&Util.checkPalindrome(i)) {
+				
 					System.out.println(i);
 
 				}
 
-			}
+			
 		}
 
 		System.out.println("Anagram");
