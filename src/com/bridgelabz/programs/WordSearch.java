@@ -6,12 +6,13 @@
 * @since    05-10-2017
 ****************************************************************************/
 
-package com.bridgelabz.Programs;
+package com.bridgelabz.programs;
 
-import com.bridgelabz.Utility.Util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+
+import com.bridgelabz.utility.Util;
 /**
  * @author aashish
  *

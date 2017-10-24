@@ -7,9 +7,10 @@
 * @since    05-10-2017
 ****************************************************************************/
 
-package com.bridgelabz.Programs;
+package com.bridgelabz.programs;
 
-import com.bridgelabz.Utility.Util;
+import com.bridgelabz.utility.Util;
+
 /**
  * @author aashish
  *
@@ -32,17 +33,14 @@ public class PrimeAnaPali {
 		System.out.println("Anagram");
 		for (int i = 0; i < 1000; i++) {
 
-			if (Util.checkPrime(i)) {
-				for (int j = i + 1; j < 1000; j++) {
-					if (Util.checkPrime(j)) {
-						if (Util.checkAnagram(i, j)) {
-							System.out.println(i + " " + j);
-						}
+			for (int j = i + 1; j < 1000; j++) {
+				if ((Util.checkPrime(i) && Util.checkPrime(j) && Util.checkAnagram(i, j))) {
 
-					}
-
+					System.out.println(i + " " + j);
 				}
+
 			}
+
 		}
 
 	}

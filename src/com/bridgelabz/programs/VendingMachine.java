@@ -6,18 +6,20 @@
 * @since    05-10-2017
 ****************************************************************************/
 
-package com.bridgelabz.Programs;
+package com.bridgelabz.programs;
 
-import com.bridgelabz.Utility.Util;
 /**
  * @author aashish
  *
  */
 import java.util.Scanner;
 
+import com.bridgelabz.utility.Util;
+
 public class VendingMachine {
 	public static void main(String args[]) {
-		int change, sum = 0;
+		int change;
+		int sum = 0;
 		int[] arrayNoOfNotes = new int[8];
 
 		Scanner scanner = new Scanner(System.in);

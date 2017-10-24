@@ -1,5 +1,5 @@
-package com.bridgelabz.Programs;
-import com.bridgelabz.Utility.Util;
+package com.bridgelabz.programs;
+import com.bridgelabz.utility.Util;
 /**
  * @author aashish
  *

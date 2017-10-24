@@ -6,9 +6,10 @@
 * @since    05-10-2017
 ****************************************************************************/
 
-package com.bridgelabz.Programs;
+package com.bridgelabz.programs;
 
-import com.bridgelabz.Utility.Util;
+import com.bridgelabz.utility.Util;
+
 /**
  * @author aashish
  *
@@ -17,13 +18,13 @@ import com.bridgelabz.Utility.Util;
 public class TimeSort {
 	public static void main(String args[]) {
 
-		long start, elapsedTime;
+		long start;
+		long elapsedTime;
 		Long timearr[] = new Long[6];
 		int j = 0;
 
 		Integer[] array = { 21, 14, 15, 43, 54 };
 		String[] sArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-	
 
 		start = System.nanoTime();
 		Util.iBubbleSort(array);
@@ -33,7 +34,7 @@ public class TimeSort {
 		j++;
 
 		start = System.nanoTime();
-	 Util.iBubbleSort(sArray);
+		Util.iBubbleSort(sArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("String bubble sort " + elapsedTime);
 		timearr[j] = elapsedTime;
@@ -46,19 +47,18 @@ public class TimeSort {
 			System.out.println(sArray[i]);
 		}
 
-	Integer[] nArray = { 21, 14, 15, 43, 54 };
+		Integer[] nArray = { 21, 14, 15, 43, 54 };
 		String[] nsArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-	
 
 		start = System.nanoTime();
-		 Util.sInsertionSort(nArray);
+		Util.sInsertionSort(nArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("integer insertion sort " + elapsedTime);
 		timearr[j] = elapsedTime;
 		j++;
 
 		start = System.nanoTime();
-	 Util.sInsertionSort(nsArray);
+		Util.sInsertionSort(nsArray);
 		elapsedTime = System.nanoTime() - start;
 		System.out.println("String insertion sort " + elapsedTime);
 		timearr[j] = elapsedTime;
@@ -75,8 +75,8 @@ public class TimeSort {
 		String skey = "abc";
 		Integer[] barray = { 21, 14, 15, 43, 54 };
 		String[] bsArray = { "abc", "bcdef", "afgddj", "abcdbd", "grda" };
-	 Util.iBubbleSort(barray);
-	 Util.iBubbleSort(bsArray);
+		Util.iBubbleSort(barray);
+		Util.iBubbleSort(bsArray);
 
 		start = System.nanoTime();
 		System.out.println("number found at index" + Util.iBinarySearch(barray, ikey, 0, array.length));

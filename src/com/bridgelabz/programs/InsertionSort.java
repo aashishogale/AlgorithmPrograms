@@ -1,32 +1,32 @@
 /***************************************************************************
-* Purpose : To create class for bubblesort
+* Purpose : To create class for Insertion Sort of string
 *
 * @author   Aashish
 * @version  1.0
 * @since    05-10-2017
 ****************************************************************************/
 
-package com.bridgelabz.Programs;
+package com.bridgelabz.programs;
 
-import com.bridgelabz.Utility.Util;
 import java.util.Scanner;
 
-/*
- **get bubble sort for integer
+import com.bridgelabz.utility.Util;
+/**
  * @author aashish
  *
  */
-public class BubbleSort {
+public class InsertionSort {
 	public static void main(String args[]) {
-		Integer[] array = new Integer[5];
-		System.out.println("enter in Values");
+		String[] array = new String[5];
+		System.out.println("enter String Values");
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < array.length; i++) {
-			array[i] = Integer.parseInt(scanner.nextLine());
+			array[i] = scanner.nextLine();
 		}
-		Util.iBubbleSort(array);
+		scanner.close();
+		Util.sInsertionSort(array);
 
-		System.out.println("Sorted int Values");
+		System.out.println("Sorted String Values");
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
